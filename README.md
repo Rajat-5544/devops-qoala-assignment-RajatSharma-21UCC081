@@ -1,23 +1,29 @@
 # DevOps Assignment: Debugging and Running a Dockerized Application
 
-Welcome to your DevOps assignment! Your goal is to debug and deploy a Dockerized application. The steps below outline the tasks you’ll complete, including setup, debugging, running, testing, and submitting your work.
+This report documents the process of debugging and running a Dockerized application as part of a hiring assignment for Qoala.
 
-## Assignment Overview
+## Debugging Process
 
-In this assignment, you’ll:
-1. Set up Docker and Docker Compose.
-2. Build Docker images and launch containers.
-3. Debug and resolve intentional errors in the code to ensure the application runs correctly.
-4. Verify the application in your browser.
-5. Document your process and submit your work.
+I started with the Python folder. I identified and corrected typos in the Dockerfile. After doing this, I successfully created an image tagged qoala/python-app.
+
+Continuing, I navigated into the Nginx folder; here I saw some typos in both the Dockerfile and also the nginx.conf that I corrected. At this, I had also added an HTML folder to the Nginx directory. Finally, after making these errors right, I built it and assigned the tag qoala/nginx.
+
+Lastly, I debugged the docker-compose.yaml file with a number of typographical errors. Correcting those allowed me to run the application using the command: docker-compose up --build
+
+Having successfully built the images, I accessed the application on localhost:80. The application responded as expected, thus showing that the setup and debugging processes were successful.
+
+Bonus: Cloud Deployment
+Bonus points I ran the application on AWS cloud server EC2. In this, I followed instructions for launching a new EC2 instance.The public IP address for accessing the application is at http://13.60.172.194/.
 
 ---
 
-## Requirements
+## Screenshots
 
-**Tools Needed:**
-- **System:** Use any laptop, PC, or cloud server.
-- **Tools:** Docker and Docker Compose must be installed and configured.
+**1**
+
+Docker-Nginx-Logs
+
+![](/screenshots/docker-nginx-logs.png)
 
 ---
 
